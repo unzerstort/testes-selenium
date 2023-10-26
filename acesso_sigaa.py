@@ -10,6 +10,7 @@ driver.get("https://sigaa.ufrn.br/")
 
 username = os.getenv("SIGAA_USERNAME")
 password = os.getenv("SIGAA_PASSWORD")
+matricula = os.getenv("MATRICULA")
 
 login = driver.find_element(By.CLASS_NAME, "login")
 login.click()
@@ -23,8 +24,5 @@ input_password.send_keys(password)
 submit = driver.find_element(By.NAME, "submit")
 submit.click()
 
-#vinculo = driver.find_element()
-#vinculo.click()
-
-
-
+vinculo = driver.find_element(By.LINK_TEXT, f'{matricula}')
+vinculo.click()
