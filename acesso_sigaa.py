@@ -10,7 +10,7 @@ driver.get("https://sigaa.ufrn.br/")
 
 username = os.getenv("SIGAA_USERNAME")
 password = os.getenv("SIGAA_PASSWORD")
-matricula = os.getenv("MATRICULA")
+matricula = os.getenv("SIGAA_MATRICULA")
 
 login = driver.find_element(By.CLASS_NAME, "login")
 login.click()
